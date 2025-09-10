@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2024-01-01
  */
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/auth/auth")
 public class AuthController {
 
     @Autowired
@@ -50,7 +50,6 @@ public class AuthController {
         LoginResponse response = authService.login(request);
         return ApiResponse.success("登录成功", response);
     }
-
 
     /**
      * 刷新JWT令牌接口
